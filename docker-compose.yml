@@ -1,0 +1,11 @@
+services:
+    sf-course-mysql:
+        image: mysql:latest
+        ports:
+            - '3306:3306'
+        volumes:
+            - './var/database:/var/lib/mysql'
+        environment:
+            MYSQL_ROOT_PASSWORD: 123
+            MYSQL_DATABASE: web
+            MSQL_ROOT_HOST: '%'
